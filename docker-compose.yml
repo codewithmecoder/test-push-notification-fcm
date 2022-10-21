@@ -1,0 +1,9 @@
+version: '3.5'
+services:
+  unt-picking:
+    build: .
+    container_name: ${CONTAINER_NAME}
+    image: ${IMAGE_NAME}
+    ports: 
+      - "7889:7889"
+    restart: always

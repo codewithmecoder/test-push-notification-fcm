@@ -15,19 +15,15 @@ FirebaseApp.Create(new AppOptions()
 {
     Credential = GoogleCredential.FromFile("private_key.json")
 });
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+app.UseSwagger(c =>
 {
-    app.UseSwagger(c =>
-    {
-        c.RouteTemplate = "testpush/swagger/{documentName}/swagger.json";
-    });
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/testpush/swagger/v1/swagger.json", "My API V1");
-        c.RoutePrefix = "testpush/swagger";
-    });
-}
+    c.RouteTemplate = "testpush/swagger/{documentName}/swagger.json";
+});
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/testpush/swagger/v1/swagger.json", "My API V1");
+    c.RoutePrefix = "testpush/swagger";
+});
 
 //app.UseHttpsRedirection();
 

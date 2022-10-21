@@ -1,6 +1,6 @@
 version: '3.5'
 services:
-  unt-picking:
+  test-push-notify-fcm:
     build: .
     container_name: ${CONTAINER_NAME}
     image: ${IMAGE_NAME}

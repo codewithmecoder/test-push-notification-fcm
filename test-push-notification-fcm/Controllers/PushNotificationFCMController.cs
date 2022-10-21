@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace test_push_notification_fcm.Controllers;
 
 [ApiController]
-[Route("[controller]/[action]")]
+[Route("testpush/[controller]/[action]")]
 public class PushNotificationFCMController : ControllerBase
 {
 
